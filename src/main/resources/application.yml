@@ -1,0 +1,23 @@
+#spring:
+#  security:
+#    user:
+#      name: Eldonk
+#      password: 123
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/spring_security?serverTimezone=UTC&useUnicode=true&characterEncodingUTF-8
+#    serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=true
+  jdbc:
+    template:
+      query-timeout: 3
+    sql:
+      init:
+        mode: always
+
+# 添加日志配置项
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
